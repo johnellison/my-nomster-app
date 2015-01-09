@@ -1,1 +1,8 @@
-<h1>Welcome to my Nomster Web App</h1>
+<%= @places.each do |place| %>
+  <hgroup>
+    <h1><%= place.name %></h1>
+    <h2 class="subheader"><i><%= place.address %></i></h2>
+    <p><%= place.description %></p>
+  </hgroup>
+  <hr>
+<% end %>

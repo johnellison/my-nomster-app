@@ -1,5 +1,8 @@
 // 01 - Base
 
+$primary-color: #E3E85A;
+$secondary-color: green;
+
 body {
   background: url('/assets/bg.png');
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -29,6 +32,12 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0;
   background-color: black;
   box-shadow: 0px 1px 3px #000;
+
+  .navbar-brand {
+    color: $primary-color;
+    font-weight: 700;
+    font-size: 2rem;
+  }
 }
 
 // 04 - States

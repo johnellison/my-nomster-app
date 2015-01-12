@@ -18,6 +18,9 @@ gem 'autoprefixer-rails'
 # Will_paginate
 gem 'will_paginate', '~> 3.0.7'
 
+# Simple Form
+gem 'simple_form'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

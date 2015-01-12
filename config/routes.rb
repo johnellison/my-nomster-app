@@ -4,6 +4,8 @@ Nomster::Application.routes.draw do
 
   root 'places#index'
 
+  resources :places
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-bottom: 2rem;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .navbar {
@@ -37,6 +37,36 @@ h1, h2, h3, h4, h5, h6 {
     color: $primary-color;
     font-weight: 700;
     font-size: 2rem;
+  }
+}
+
+.m-pagination-links {
+  text-align: center;
+  padding: 1em;
+  cursor: default; 
+  font-size: 2rem;
+  a, span {
+    padding: 0.2em 0.3em; 
+  }
+  .disabled {
+    color: white; 
+  }
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    background-color: $primary-color;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    border-radius: 1em;
+  }
+  a {
+    text-decoration: none;
+    color: white; 
+    &:hover, :focus {
+      text-decoration: underline;
+    }
   }
 }
 

@@ -15,6 +15,9 @@ gem 'bootstrap-sass', '~> 3.3.0'
 # Autoprefixer for vendor prefixes
 gem 'autoprefixer-rails'
 
+# Will_paginate
+gem 'will_paginate', '~> 3.0.7'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

@@ -1,7 +1,15 @@
-<%= @places.each do |place| %>
+<%= @places.each do |place| %> 
+
   <div class="m-place-box col-xs-10 col-xs-offset-1">
     <h1><%= place.name %></h1>
     <h2 class="subheader"><i><%= place.address %></i></h2>
     <p><%= place.description %></p>
   </div>
 <% end %>
+<div class="container-fluid">
+  <div class="m-pagination-links col-xs-10 col-xs-offset-1">
+    <%= will_paginate @places %>
+  </div>
+</div>
+
+

@@ -1,11 +1,19 @@
 // 01 - Base
+
+body {
+  background: url('/assets/bg.png');
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin:0;
   padding:0;
 }
+
 // 02 - Layout
 
 // 03 - Modules
+
 .m-place-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -16,6 +24,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
   padding: 2rem;
 }
+
+.navbar {
+  border-radius: 0;
+  background-color: black;
+  box-shadow: 0px 1px 3px #000;
+}
+
 // 04 - States
 
 // 05 - Themes

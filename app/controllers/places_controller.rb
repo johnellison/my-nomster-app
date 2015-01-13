@@ -1,6 +1,7 @@
 class PlacesController < ApplicationController
 
-  before_action :authenticate_user!, :only => [:create, :new]
+  # Add a filter to authenticate user before any of these actions in the array
+  before_action :authenticate_user!, :only => [:create, :new, :edit, :update]
 
   def index
     @places = Place.paginate(:page => params[:page], :per_page => 3)
@@ -21,10 +22,21 @@ class PlacesController < ApplicationController
 
   def edit
     @place = Place.find(params[:id])
+
+    # Check to see if user logged in is user that created the place
+    if @place.user != current_user 
+      return render :text => 'Sorry, you are not allowed to edit places that you did not create.', :status => 'forbidden'
+    end
   end
 
   def update
     @place = Place.find(params[:id])
+
+    # Check to see if user logged in is user that created the place
+    if @place.user != current_user
+      return render :text => 'Sorry, you are not allowed to edit places that you did not create.', :status => 'forbidden'
+    end
+
     @place.update_attributes(place_params)
     redirect_to root_path
   end

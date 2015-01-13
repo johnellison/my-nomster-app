@@ -13,6 +13,13 @@ h1, h2, h3, h4, h5, h6 {
   padding:0;
 }
 
+.b-log-in {
+  color: white;
+  &.btn {
+    margin: 2rem 0;
+  }
+}
+
 // 02 - Layout
 
 // 03 - Modules

@@ -24,6 +24,12 @@ gem 'simple_form'
 # Devise User Authenticatoin
 gem 'devise', '>= 3.2.4'
 
+# Use Geocoder for translating address to lat & long
+gem 'geocoder'
+
+# Use figaro to add values to ENV on localhost for securely configuring rails applications
+gem 'figaro'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

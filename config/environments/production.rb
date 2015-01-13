@@ -1,6 +1,9 @@
 Nomster::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Configure mailer url for devise
+  config.action_mailer.default_url_options = { :host => 'nomster-john-ellison.herokuapp.com' }
+  
   # Code is not reloaded between requests.
   config.cache_classes = true
 

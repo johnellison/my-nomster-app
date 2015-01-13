@@ -1,7 +1,7 @@
 <%= @places.each do |place| %> 
 
   <div class="m-place-box col-xs-10 col-xs-offset-1">
-    <h1><%= place.name %></h1>
+    <h1><%= link_to place.name, place_path(place) %></h1>
     <h2 class="subheader"><i><%= place.address %></i></h2>
     <p><%= place.description %></p>
     <% if place.user.present? %>

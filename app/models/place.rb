@@ -5,4 +5,5 @@ class Place < ActiveRecord::Base
   validates :name, :presence => true, :length => { :minimum => 2 }
   validates :description, :presence => true
   validates :address, :presence => true
+  has_many :comments
 end

@@ -1,6 +1,6 @@
 <div class="m-place-box col-xs-10 col-xs-offset-1">
   <h1>Enter The Details of Your Place</h1>
-  <%= simple_form_for Place.new do |f| %>
+  <%= simple_form_for @place do |f| %>
     <%= f.error_notification %>
     <%= f.input :name, placeholder: 'San Festivollo' %>
     <%= f.input :address, placeholder: '123 Street Way...' %>

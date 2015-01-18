@@ -57,8 +57,8 @@
         <h2 class="m-photo-heading">Photos of <%= @place.name %></h2>
         <div class="row">
         <% @place.photos.each do |photo| %>
-          <div class="col-xs-4 m-photo-container">
-            <img src="#" alt="" class="m-photo-image">
+          <div class="col-md-6 col-lg-4 m-photo-container">
+            <%= image_tag photo.picture, :class => 'm-photo-picture' %>
             <div class="clear"></div>
             <p class="m-photo-caption">
               <%= photo.caption %>
@@ -87,6 +87,7 @@
             </div>
             <div class="modal-body">
               <%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
+                <%= f.input :picture %>
                 <%= f.input :caption %>
             </div>
             <div class="modal-footer">

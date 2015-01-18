@@ -45,12 +45,34 @@
     <% end %>
   <% end %>
 
-  <h3>Comment on <%= @place.name %></h3>
-  <%= simple_form_for @comment, :url => place_comments_path(@place) do |f| %>
-    <%= f.input :message %>
-    <%= f.input :rating, :as => :select, :collection => Comment::RATINGS %>
-    <%= f.submit 'Comment', :class => 'btn btn-primary' %>
-  <% end %>
+  
+
+  <!-- Button trigger modal -->
+  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Comment
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Comment on <%= @place.name %></h4>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for @comment, :url => place_comments_path(@place) do |f| %>
+            <%= f.input :message %>
+            <%= f.input :rating, :as => :select, :collection => Comment::RATINGS %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= f.submit 'Comment', :class => 'btn btn-primary' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="pull-right">
     <% if current_user && current_user == @place.user %>

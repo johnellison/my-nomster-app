@@ -32,19 +32,23 @@
   </script>
   <% end %>
 
-  <h2>Comments for <%= @place.name %></h2>
-  <% @place.comments.each do |comment| %>
-    <blockquote>
-      <b><%= comment.rating %></b>
-      <p><%= comment.message %></p>
-      <small><%= comment.user.email %></small>
-    </blockquote>
+  <% if @place.comments.present? %>
+    <h2>Comments for <%= @place.name %></h2>
+    <% @place.comments.each do |comment| %>
+      <blockquote>
+        <% if comment.humanized_rating.present? %>
+          <b><strong>Rating:</strong> <%= comment.humanized_rating %></b>
+        <% end %>
+        <p><strong>Comment:</strong> <%= comment.message %></p>
+        <small><%= comment.user.email %></small>
+      </blockquote>
+    <% end %>
   <% end %>
 
   <h3>Comment on <%= @place.name %></h3>
   <%= simple_form_for @comment, :url => place_comments_path(@place) do |f| %>
     <%= f.input :message %>
-    <%= f.input :rating %>
+    <%= f.input :rating, :as => :select, :collection => Comment::RATINGS %>
     <%= f.submit 'Comment', :class => 'btn btn-primary' %>
   <% end %>
 

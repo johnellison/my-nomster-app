@@ -30,8 +30,11 @@ gem 'geocoder'
 # Use figaro to add values to ENV on localhost for securely configuring rails applications
 gem 'figaro'
 
-# User CarrierWave for uploading photo images
+# Use CarrierWave for uploading photo images
 gem 'carrierwave'
+
+# Use fog to configure CarrierWave with AWS S3
+gem 'fog', '~> 1.3.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

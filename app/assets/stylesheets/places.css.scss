@@ -1,3 +1,11 @@
 // Place all the styles related to the places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.m-place-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.m-place-edit-container {
+  padding: 2rem 0;
+}

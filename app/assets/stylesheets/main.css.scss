@@ -95,6 +95,13 @@ blockquote p {
     font-weight: 700;
     font-size: 2rem;
   }
+
+  .navbar-toggle {
+    background-color: white;
+    .icon-bar {
+      background-color: black;
+    }
+  }
 }
 
 .m-pagination-links {

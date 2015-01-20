@@ -1,5 +1,7 @@
 Nomster::Application.configure do
 
+  config.action_mailer.delivery_method = :smtp
+
   ActionMailer::Base.smtp_settings = {
       :address        => 'smtp.sendgrid.net',
       :port           => '587',
@@ -9,7 +11,7 @@ Nomster::Application.configure do
       :domain         => 'heroku.com',
       :enable_starttls_auto => true
     }
-    
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Configure mailer url for devise

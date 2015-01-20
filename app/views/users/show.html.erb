@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="m-place-box col-xs-10 col-xs-offset-1">
+      <div class="col-sm-1">
+        <%= image_tag 'user.svg', :class => 'm-profile-pic' %>
+      </div>
+      <div class="col-sm-11">
+        <hgroup>
+          <h1>Welcome! <%= @user.email %></h1>
+          <h3>Member since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+          <h4><%= @user.comments.count %> total comments</h4>
+          <h5><%= @user.comments.where(:rating => '5_stars').count %> total 5 star reviews</h5>
+        </hgroup>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>

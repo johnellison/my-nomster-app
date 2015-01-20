@@ -8,14 +8,6 @@ body {
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin:0;
-  padding:0;
-  a {
-
-  }
-}
-
 p.lead {
   font-size: 1.8rem;
 }
@@ -65,26 +57,26 @@ blockquote p {
   margin-bottom: 2rem;
 }
 
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    height: 550px;
-    width: 100%;
-}
+// .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+//     height: 550px;
+//     width: 100%;
+// }
 
-.carousel-caption {
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
-    font-size: 60px;
-    font-weight:100;
-    text-shadow: rgba(0,0,0,0.95) 2px 2px;
-    background-color: rgba(0,0,0,0.5);
-    width:100%;
-    position:absolute;
-    left:0;
-}
+// .carousel-caption {
+//     font-family: 'Helvetica Neue', Helvetica, sans-serif;
+//     font-size: 60px;
+//     font-weight:100;
+//     text-shadow: rgba(0,0,0,0.95) 2px 2px;
+//     background-color: rgba(0,0,0,0.5);
+//     width:100%;
+//     position:absolute;
+//     left:0;
+// }
 
-.carousel {
-  box-shadow: 0px 3px 8px #2a2a2a;
-  margin-bottom: 2rem;
-}
+// .carousel {
+//   box-shadow: 0px 3px 8px #2a2a2a;
+//   margin-bottom: 2rem;
+// }
 
 // 03 - Modules
 
@@ -110,7 +102,7 @@ blockquote p {
   border-radius: 0;
   background-color: black;
   box-shadow: 0px 1px 3px #000;
-  margin-bottom: 0;
+  // margin-bottom: 0;
 
   .navbar-brand {
     color: $primary-color;
@@ -154,6 +146,10 @@ blockquote p {
       text-decoration: underline;
     }
   }
+}
+
+.m-profile-pic {
+  margin-top: 2.5rem;
 }
 
 // 04 - States

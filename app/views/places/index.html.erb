@@ -3,18 +3,8 @@
     <h1><%= link_to place.name, place_path(place) %></h1>
     <h2 class="subheader"><i><%= place.address %></i></h2>
     <p><%= place.description %></p>
-    <% if place.user.present? %>
-      <small>Added by: <%= place.user.email %></small>
-    <% end %>
-    <% if place.comments.present? %>
-      <blockquote>
-        <p><strong></strong> <%= place.comments.last.message %></p>
-        <br>
-        <% if place.comments.last.humanized_rating.present? %>
-            <p><strong><%= place.comments.last.humanized_rating %></strong></p>
-        <% end %>
-        <small class="pull-right"><%= place.comments.last.user.email %></small>
-      </blockquote>
+    <% if place.photos.present? %>
+      <%= image_tag place.photos.last.picture, :size => "250x250" %>
     <% end %>
   </div>
 <% end %>

@@ -4,7 +4,7 @@ Nomster::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  root 'places#index'
+  root 'places#masonry'
 
   resources :places do
     resources :comments, :only => :create

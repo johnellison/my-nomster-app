@@ -1,0 +1,29 @@
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+  <% @places.each do |place| %>
+  <div class="m-place-wrapper">
+    <%= image_tag place.photos, :size => "236", :class => "m-place-picture" %>
+    <h3 class="m-place-name"><%= place.name %></h3>
+    <p>email@address.com</p>
+  </div>
+  <% end %>
+</div>
+
+<div class="container-fluid">
+  <div class="m-pagination-links">
+    <%= will_paginate @places %>
+  </div>
+</div>
+<script>
+    $(function() {
+      var $container = $('#masonry-container');
+      $container.imagesLoaded(function() {
+        $container.masonry({
+          itemSelector: '.m-place-wrapper',
+          gutterWidth: 15,
+          columnWidth: 236,
+          isFitWidth: true,
+          isAnimated: !Modernizr.csstransitions
+        });
+      });
+    });
+</script>

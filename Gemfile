@@ -15,6 +15,9 @@ gem 'bootstrap-sass', '~> 3.3.0'
 # Autoprefixer for vendor prefixes
 gem 'autoprefixer-rails'
 
+# Use Masonry-rails for masonry layout, imagesLoaded & infinite scroll
+gem 'masonry-rails'
+
 # Will_paginate
 gem 'will_paginate', '~> 3.0.7'
 

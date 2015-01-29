@@ -36,5 +36,23 @@
           isAnimated: !Modernizr.csstransitions
         });
       });
+
+      $container.infinitescroll({
+        navSelector: 'nav.pagination',
+        nextSelector: 'nav.pagination a[rel=next]',
+        itemSelector: '#masonry-container .m-place-wrapper',
+        loading: {
+          finishedMsg: 'No more places to load. Wahoo!',
+          img: '/assets/masonry/loader.gif',
+          msgText: 'Loading more places...'
+        }
+      },
+      function( newElements ) {
+        var $newElems = $( newElements ).css({ opacity: 0 });
+        $newElems.imagesLoaded(function() {
+          $newElems.animate({ opacity: 1 })
+          $container.masonry('appended', $newElems, true);
+        });
+      });
     });
 </script>

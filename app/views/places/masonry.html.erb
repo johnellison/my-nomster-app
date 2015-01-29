@@ -22,11 +22,8 @@
   <% end %>
 </div>
 
-<div class="container-fluid">
-  <nav class="m-pagination-links">
-    <%= will_paginate @places %>
-  </nav>
-</div>
+<%= paginate @places, :outer_window => 3 %>
+
 <script>
     $(function() {
       var $container = $('#masonry-container');

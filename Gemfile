@@ -18,8 +18,8 @@ gem 'autoprefixer-rails'
 # Use Masonry-rails for masonry layout, imagesLoaded & infinite scroll
 gem 'masonry-rails'
 
-# Will_paginate
-gem 'will_paginate', '~> 3.0.7'
+# Kaminari for paging
+gem 'kaminari'
 
 # Simple Form
 gem 'simple_form'

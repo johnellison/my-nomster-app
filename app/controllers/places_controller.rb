@@ -4,11 +4,11 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, :only => [:create, :new, :edit, :update, :destroy]
 
   def index
-    @places = Place.paginate(:page => params[:page], :per_page => 3)
+    @places = Place.paginate(:page => params[:page])
   end
 
   def masonry
-    @places = Place.paginate(:page => params[:page], :per_page => 15)
+    @places = Place.order(:name).page(params[:page])
   end
 
   def new

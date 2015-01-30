@@ -8,7 +8,7 @@ class PlacesController < ApplicationController
   end
 
   def masonry
-    @places = Place.order(:name).page(params[:page]).per(15)
+    @places = Place.order(:name).page(params[:page]).per(9)
   end
 
   def new

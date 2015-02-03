@@ -4,10 +4,6 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, :only => [:create, :new, :edit, :update, :destroy]
 
   def index
-    @places = Place.paginate(:page => params[:page])
-  end
-
-  def masonry
     @places = Place.order(:name).page(params[:page]).per(9)
   end
 
@@ -19,7 +15,7 @@ class PlacesController < ApplicationController
     @place = current_user.places.create(place_params)
     
     if @place.valid? 
-      redirect_to root_path
+      redirect_to place_path(@place)
     else
       render :new, :status => :unprocessable_entity
     end
